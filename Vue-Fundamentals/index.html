@@ -5,15 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div id="app">
-        {{ firstName }}
-        <br>
-        {{ lastName }}
+    <div id="app" class="container" v-cloak>
+        <h1>To-Do List App</h1>
+        <div class="add-todo">
+            <input type="text" id="todo-input" placeholder="Enter your to-do">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="todo-list">
+            <li>Buy groceries</li>
+            <li>Finish homework</li>
+            <li>Call mom</li>
+            <li>Go for a run</li>
+            <li>Clean the house</li>
+        </ul>
+
+        <h1>{{ fullName() }}</h1>
+        <hr>
+        <label>First Name</label>
+        <input type="text" v-model="firstName" />
+
+        <label>Last Name</label>
+        <input type="text" v-model="lastName" />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

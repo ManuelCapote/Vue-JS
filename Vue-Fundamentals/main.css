@@ -1,1 +1,80 @@
+/* Reset some default styles */
+[v-cloak] {
+  display: none;
+}
+/* main.css */
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #ffffff; /* White text */
+}
+
+.add-todo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  background-color: #333333; /* Dark input field */
+  border: none;
+  color: #ffffff; /* White text */
+  margin-right: 10px;
+}
+
+#add-button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Teal button background */
+  border: none;
+  color: #ffffff; /* White text */
+  cursor: pointer;
+}
+
+#add-button:hover {
+  background-color: #66bb6a; /* Lighter teal on hover */
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+#todo-list li {
+  background-color: #333333; /* Dark list items */
+  color: #ffffff; /* White text */
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+label {
+  color: #ffffff; /* White text */
+  display: block;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #333333; /* Dark input fields */
+  border: none;
+  color: #ffffff; /* White text */
+}
+
+hr {
+  border-color: #444444; /* Dark hr color */
+}
+
+/* Add any additional styling below */
