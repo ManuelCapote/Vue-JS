@@ -25,12 +25,16 @@
         </ul>
 
         <h1>{{ fullName() }}</h1>
+        <p><a :href="url">Google</a></p>
+        <p>{{ age }}</p>
+        <button @click="increment">Increment</button>
+        <button @click="age--">Decrement</button>
         <hr>
         <label>First Name</label>
         <input type="text" v-model="firstName" />
 
         <label>Last Name</label>
-        <input type="text" v-model="lastName" />
+        <input type="text" :value="lastName" @input="updateLastName" />
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
