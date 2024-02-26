@@ -2,15 +2,13 @@ const vm = Vue.createApp({
   data() {
     return {
       firstName: "Jhon",
+      middleName: "",
       lastName: "Doe",
       url: "https://google.com",
       age: 20,
     };
   },
   methods: {
-    fullName() {
-      return `${this.firstName} ${this.lastName}`;
-    },
     increment() {
       return this.age++;
     },
@@ -21,4 +19,10 @@ const vm = Vue.createApp({
       this.lastName = event.target.value;
     },
   },
+  computed: {
+    fullName() {
+      console.log("Running again");
+      return `${this.firstName} ${this.middleName} ${this.lastName}`;
+    },
+  }
 }).mount("#app");

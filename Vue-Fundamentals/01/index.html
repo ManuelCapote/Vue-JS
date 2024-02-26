@@ -24,17 +24,27 @@
             <li>Clean the house</li>
         </ul>
 
-        <h1>{{ fullName() }}</h1>
+        <h1>{{ fullName }}</h1>
         <p><a :href="url">Google</a></p>
+
         <p>{{ age }}</p>
         <button @click="increment">Increment</button>
         <button @click="age--">Decrement</button>
+
         <hr>
+
         <label>First Name</label>
         <input type="text" v-model="firstName" />
 
+        <label>Middle Name</label>
+        <input type="text" v-model="middleName" />
+
         <label>Last Name</label>
         <input type="text" :value="lastName" @input="updateLastName" />
+
+         <label>Age</label>
+         <input type="number" v-model.number="age" />
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
